@@ -1,10 +1,4 @@
-https://links.rediff.com/cgi-bin/red.cgi?red=https%3A%2F%2Fjobtwine%2Ecom%2Fmeeting%2Fcopilot%3Fid%3DP1AWZfhKRDAHwk3HSj72%252FEa3SKOhr9TDcsqIkcMlwms3RGiqXdDEBydHPzjOWqkm%26amp%3Btype%3DP&isImage=0&BlockImage=0&rediffng=1&
-
-
-
-https://links.rediff.com/cgi-bin/prored.cgi?red=https%3A%2F%2Fjobtwine%2Ecom%2Fmeeting%2Fcopilot%3Fid%3DP1AWZfhKRDAHwk3HSj72%252FEa3SKOhr9TDcsqIkcMlwms3RGiqXdDEBydHPzjOWqkm%26type%3DP&isImage=0&BlockImage=0&rediffng=0
-
-https://www.jobtwine.com/meeting/copilot?id=P1AWZfhKRDAHwk3HSj72%2FEa3SKOhr9TDcsqIkcMlwms3RGiqXdDEBydHPzjOWqkm&type=P
+https://www.jobtwine.com/meeting/copilot?id=L2nxUfuSy5TL%2FkE%2BOFoxMsbDvLD5DegUMFTjqWTFg%2F%2BVNpiQwuCyPF6oaBV41GmV&type=P
 
 from pydantic import BaseModel, Field, validator
 from typing import List, Optional, Dict, Any, Union
