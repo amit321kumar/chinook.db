@@ -1,6 +1,5 @@
 
-https://teams.microsoft.com/l/meetup-join/19%3ameeting_NmE4M2U5OGEtYTBhZS00M2QxLThiMjgtNDRjYTQ1ZGQzYjc4%40thread.v2/0?context=%7b%22Tid%22%3a%2276a2ae5a-9f00-4f6b-95ed-5d33d77c4d61%22%2c%22Oid%22%3a%22c0a383c8-ebe6-4f20-9503-1de60003d486%22%7d
-
+https://teams.live.com/meet/9368630493462?p=bofYeyYCbV0dnd43EB
 
 
 from pydantic import BaseModel, Field, validator
