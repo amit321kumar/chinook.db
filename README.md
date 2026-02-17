@@ -1,4 +1,7 @@
+Interview Link - https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDZlZmZlZWMtNzA0ZC00MzI2LWJiMzktZmI5YjExZjA3N2Uz%40thread.v2/0?context=%7b%22Tid%22%3a%226e8992ec-76d5-4ea5-8eae-b0c5e558749a%22%2c%22Oid%22%3a%22e4e13d39-13bc-403e-84ae-836a2bac3f98%22%7d
 
+
+ Wishing you the very best
 https://mobile-webview.gmail.com/86157644/https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDZlZmZlZWMtNzA0ZC00MzI2LWJiMzktZmI5YjExZjA3N2Uz%40thread.v2/0?context=%7b%22Tid%22%3a%226e8992ec-76d5-4ea5-8eae-b0c5e558749a%22%2c%22Oid%22%3a%22e4e13d39-13bc-403e-84ae-836a2bac3f98%22%7d%20AHFcMlM1A2EBe1dvBHUPOVQwBS8=
 from pydantic import BaseModel, Field, validator
 from typing import List, Optional, Dict, Any, Union
