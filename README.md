@@ -1,10 +1,5 @@
-https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_MmUyNzNhZDUtYjkwZi00ZWUwLWJjMDgtMWU2MGQwMmMyYTQy%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%252293f33571-550f-43cf-b09f-cd331338d086%2522%252c%2522Oid%2522%253a%25224c099197-5cfb-42b9-ae31-4547340cada0%2522%257d%26anon%3Dtrue&type=meetup-join&deeplinkId=c21e869d-4f67-48a6-a31b-ddd4db461d5a&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true
 
-
-
-https://teams.live.com/meet/9368630493462?p=bofYeyYCbV0dnd43EB
-
-
+https://mobile-webview.gmail.com/86157644/https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDZlZmZlZWMtNzA0ZC00MzI2LWJiMzktZmI5YjExZjA3N2Uz%40thread.v2/0?context=%7b%22Tid%22%3a%226e8992ec-76d5-4ea5-8eae-b0c5e558749a%22%2c%22Oid%22%3a%22e4e13d39-13bc-403e-84ae-836a2bac3f98%22%7d%20AHFcMlM1A2EBe1dvBHUPOVQwBS8=
 from pydantic import BaseModel, Field, validator
 from typing import List, Optional, Dict, Any, Union
 from enum import Enum
