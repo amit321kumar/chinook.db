@@ -1,5 +1,9 @@
-nk <https://acnrecruitment.accenture.com/testcompatibility/interview/candidatewelcome.html?data=aHR0cHM6Ly9hY25yZWNydWl0bWVudC5hY2NlbnR1cmUuY29tL3YyL2ludGVydmlldy9ob21lL2V5SnNkQ0k2SUNKVWEyNDZNV0UyWm1NMk1Ea3RZak5tWXkwME5qYzRMV0ptTm1NdFptVmpOVEJsWVRSbU16VXhJbjA9>
 
+ttps://teams.microsoft.com/l/meetup-join/19%3ameeting_NDZlZmZlZWMtNzA0ZC00MzI2LWJiMzktZmI5YjExZjA3N2Uz%40thread.v2/0?context=%7b%22Tid%22%3a%226e8992ec-76d5-4ea5-8eae-b0c5e558749a%22%2c%22Oid%22%3a%22e4e13d39-13bc-403e-84ae-836a2bac3f98%22%7d
+
+
+
+ Wishing you the very best for your
 Link to Job Description: Link to
 
 
