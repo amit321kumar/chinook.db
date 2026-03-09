@@ -1,5 +1,5 @@
 
-https://www.google.com/url?q=https:https://candidate.vprople.com/&source=gmail&ust=1772115150772000&usg=AOvVaw0h1v-NuedxOmv4G7LNIzy1
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjAxNDQ3ODktMGZiZi00MThlLTg2YjAtZjJkOGQxZTAxNzQz%40thread.v2/0?context=%7b%22Tid%22%3a%22edf442f5-b994-4c86-a131-b42b03a16c95%22%2c%22Oid%22%3a%2238a27428-0ab3-452c-817e-b31da52037cb%22%7d
 
 
 
