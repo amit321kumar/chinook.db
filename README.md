@@ -1,3 +1,13 @@
+
+Conf.(Microsoft Teams)
+
+Join Microsoft Teams Meeting<https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGE0ZjBlMDUtN2U4ZS00Y2MzLTg4ZmItNDU0MTI2YWQ1NGZj%40thread.v2/0?context=%7b%22Tid%22%3a%2277428205-87ff-4048-a645-91b337240228%22%2c%22Oid%22%3a%22eec8a5ce-8ee6-4d78-98bb-cb42a4bec28e%22%7d>
+
+Warm Regards,
+
+
+
+
 Video Conf.(Microsoft Teams)
 
 Join Microsoft Teams Meeting<https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTMzYWM1MDYtYWZjYi00NDBhLThjZjEtNjVlOTc3OTA2ODM1%40thread.v2/0?context=%7b%22Tid%22%3a%2277428205-87ff-4048-a645-91b337240228%22%2c%22Oid%22%3a%22eec8a5ce-8ee6-4d78-98bb-cb42a4bec28e%22%7d>
