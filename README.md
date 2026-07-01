@@ -1,64 +1,55 @@
 <mj-section background-color="#eeeeee" padding="14px">
-  <mj-column padding="0">
-    <mj-table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-      <tr>
-        <!-- LEFT IMAGE -->
-        <td width="130" valign="top" style="padding-right:14px;">
-          {% if hook.image_url %}
-          <img
-            src="{{ hook.image_url }}"
-            width="130"
-            alt=""
-            style="width:130px; height:280px; object-fit:cover; border-radius:16px; display:block;"
-          />
-          {% else %}
-          <table role="presentation" cellpadding="0" cellspacing="0" width="130">
-            <tr>
-              <td
-                width="130"
-                height="280"
-                align="center"
-                valign="middle"
-                style="
-                  width:130px;
-                  height:280px;
-                  background:#ff4d4d;
-                  border-radius:16px;
-                  color:#ffffff;
-                  font-family:Arial, sans-serif;
-                  font-size:13px;
-                  text-align:center;
-                "
-              >
-                Image Placeholder
-              </td>
-            </tr>
-          </table>
-          {% endif %}
-        </td>
+      <mj-column padding="0">
+        <mj-table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+            <!-- LEFT IMAGE -->
+            <td width="130" valign="top" style="padding-right:14px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" width="130">
+                <tr>
+                  <td
+                    width="130"
+                    height="280"
+                    align="center"
+                    valign="middle"
+                    style="
+                      width:130px;
+                      height:280px;
+                      background:#ff4d4d;
+                      border-radius:16px;
+                      color:#ffffff;
+                      font-family:Arial, sans-serif;
+                      font-size:13px;
+                      text-align:center;
+                    "
+                  >
+                    Image Placeholder
+                  </td>
+                </tr>
+              </table>
+            </td>
 
-        <!-- RIGHT CONTENT -->
-        <td valign="top">
-          <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+            <!-- RIGHT CONTENT -->
+            <td valign="top">
+              <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
 
-            <!-- HEADLINE -->
-            <tr>
-              <td
-                style="
-                  font-family:Arial, sans-serif;
-                  font-size:15px;
-                  font-weight:bold;
-                  line-height:20px;
-                  color:#2b2b2b;
-                  padding-bottom:10px;
-                "
-              >
-                {{ hook.headline }}
-              </td>
-            </tr>
+                <!-- HEADLINE -->
+                <tr>
+                  <td
+                    style="
+                      font-family:Arial, sans-serif;
+                      font-size:15px;
+                      font-weight:bold;
+                      line-height:20px;
+                      color:#2b2b2b;
+                      padding-bottom:10px;
+                    "
+                  >
+                   {{ hook.headline }}
+                  </td>
+                </tr>
 
-            <!-- QUESTIONS -->
-            <tr>
+                <!-- QUESTIONS -->
+                <tr>
               <td>
                 <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
                   {% for question in hook.questions %}
@@ -97,8 +88,8 @@
               </td>
             </tr>
 
-            <!-- CTA BUTTON -->
-            <tr>
+                <!-- CTA BUTTON -->
+               <tr>
               <td style="padding-top:2px;">
                 <a href="{{ hook.cta_url }}" style="text-decoration:none;">
                   <table role="presentation" cellpadding="0" cellspacing="0">
@@ -151,20 +142,9 @@
               </td>
             </tr>
 
-          </table>
-        </td>
-      </tr>
-    </mj-table>
-
-    {% if show_mlr_bbox_email_hook %}
-    <mj-raw>
-      <div style="position:relative; height:0;">
-        <span style="position:absolute;bottom:0px;right:0px;background:{{ mlr_bbox_email_hook_color }};">
-          HOOK
-        </span>
-      </div>
-    </mj-raw>
-    {% endif %}
-
-  </mj-column>
-</mj-section>
+              </table>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
