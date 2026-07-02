@@ -1,6 +1,17 @@
 <mjml>
   <mj-head>
     <mj-style>
+      /* Force predictable column widths: with the default table-layout:auto,
+         browsers can size a text-heavy column much narrower than expected
+         when nested tables (icon+text pairs) sit inside it — this is the
+         real cause of the question/options wrapping too tightly, not font
+         size. Fixed layout allocates the two explicit-width columns (image
+         220px, spacer 16px) exactly that, and gives 100% of the remainder
+         to the content column, every time. */
+      .hook-outer-table {
+        table-layout:fixed;
+      }
+
       /* ============================================================
          RESPONSIVE OVERRIDES — the hook body below is built with raw
          HTML tables (not mj-section/mj-column), so MJML's automatic
@@ -10,7 +21,7 @@
          otherwise win by specificity in most rendering engines.
          ============================================================ */
       @media only screen and (max-width:480px) {
-        .hook-outer-table { width:100% !important; }
+        .hook-outer-table { width:100% !important; table-layout:fixed !important; }
 
         /* Stack image above content */
         .hook-image-cell,
@@ -36,7 +47,7 @@
 
         /* Question */
         .hook-question {
-          font-size:19px !important;
+          font-size:17px !important;
           line-height:1.3 !important;
         }
 
@@ -47,7 +58,7 @@
         .hook-option-cell {
           display:block !important;
           width:100% !important;
-          padding:0 0 14px 0 !important;
+          padding:0 0 10px 0 !important;
         }
 
         /* CTA goes full width */
@@ -99,7 +110,7 @@
               "
             >
               <!--[if mso]>
-              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:220px; height:283px;">
+              <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:220px; height:227px;">
                 <v:fill color="#dcdcdc" />
                 <v:textbox inset="0,0,0,0"><div>&nbsp;</div></v:textbox>
               </v:rect>
@@ -124,7 +135,7 @@
                 style="background:#1a7f8c; border-radius:16px;"
               >
                 <tr>
-                  <td style="padding:26px 24px;">
+                  <td style="padding:20px 20px;">
                     <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
 
                       <!-- QUESTION -->
@@ -133,11 +144,11 @@
                           class="hook-question"
                           style="
                             font-family:Arial, sans-serif;
-                            font-size:22px;
+                            font-size:19px;
                             font-weight:bold;
                             line-height:1.3;
                             color:#f5b800;
-                            padding-bottom:20px;
+                            padding-bottom:14px;
                           "
                         >
                           What is your top treatment priority for allergic rhinitis?
@@ -150,17 +161,17 @@
                            live in their own nested table so they never
                            split apart when the pair stacks. -->
                       <tr>
-                        <td class="hook-option-cell" width="50%" valign="top" style="padding:0 16px 18px 0;">
+                        <td class="hook-option-cell" width="50%" valign="top" style="padding:0 16px 12px 0;">
                           <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                               <td width="24" valign="top" style="padding-right:8px;">
-                                <div style="width:16px; height:16px; border-radius:50%; background:#f5c000;">&nbsp;</div>
+                                <div style="width:14px; height:14px; border-radius:50%; background:#f5c000;">&nbsp;</div>
                               </td>
                               <td valign="top" style="
                                   font-family:Arial, sans-serif;
-                                  font-size:16px;
+                                  font-size:15px;
                                   font-weight:bold;
-                                  line-height:1.35;
+                                  line-height:1.3;
                                   color:#ffffff;
                                 ">
                                 Faster symptom control
@@ -169,17 +180,17 @@
                           </table>
                         </td>
 
-                        <td class="hook-option-cell" width="50%" valign="top" style="padding:0 0 18px 0;">
+                        <td class="hook-option-cell" width="50%" valign="top" style="padding:0 0 12px 0;">
                           <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                               <td width="24" valign="top" style="padding-right:8px;">
-                                <div style="width:16px; height:16px; border-radius:50%; background:#f5c000;">&nbsp;</div>
+                                <div style="width:14px; height:14px; border-radius:50%; background:#f5c000;">&nbsp;</div>
                               </td>
                               <td valign="top" style="
                                   font-family:Arial, sans-serif;
-                                  font-size:16px;
+                                  font-size:15px;
                                   font-weight:bold;
-                                  line-height:1.35;
+                                  line-height:1.3;
                                   color:#ffffff;
                                 ">
                                 Lower sedation burden
@@ -189,17 +200,17 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="hook-option-cell" width="50%" valign="top" style="padding:0 16px 18px 0;">
+                        <td class="hook-option-cell" width="50%" valign="top" style="padding:0 16px 12px 0;">
                           <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                               <td width="24" valign="top" style="padding-right:8px;">
-                                <div style="width:16px; height:16px; border-radius:50%; background:#f5c000;">&nbsp;</div>
+                                <div style="width:14px; height:14px; border-radius:50%; background:#f5c000;">&nbsp;</div>
                               </td>
                               <td valign="top" style="
                                   font-family:Arial, sans-serif;
-                                  font-size:16px;
+                                  font-size:15px;
                                   font-weight:bold;
-                                  line-height:1.35;
+                                  line-height:1.3;
                                   color:#ffffff;
                                 ">
                                 Flexible dosing options
@@ -208,17 +219,17 @@
                           </table>
                         </td>
 
-                        <td class="hook-option-cell" width="50%" valign="top" style="padding:0 0 18px 0;">
+                        <td class="hook-option-cell" width="50%" valign="top" style="padding:0 0 12px 0;">
                           <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                               <td width="24" valign="top" style="padding-right:8px;">
-                                <div style="width:16px; height:16px; border-radius:50%; background:#f5c000;">&nbsp;</div>
+                                <div style="width:14px; height:14px; border-radius:50%; background:#f5c000;">&nbsp;</div>
                               </td>
                               <td valign="top" style="
                                   font-family:Arial, sans-serif;
-                                  font-size:16px;
+                                  font-size:15px;
                                   font-weight:bold;
-                                  line-height:1.35;
+                                  line-height:1.3;
                                   color:#ffffff;
                                 ">
                                 Sustained day-long relief
@@ -230,15 +241,15 @@
 
                       <!-- CTA BUTTON -->
                       <tr>
-                        <td style="padding-top:6px;">
+                        <td style="padding-top:2px;">
                           <a href="https://example.com" style="text-decoration:none;">
                             <table class="hook-cta-table" role="presentation" cellpadding="0" cellspacing="0">
                               <tr>
                                 <td
                                   style="
                                     background:#f2b400;
-                                    border-radius:24px;
-                                    padding:10px 8px 10px 20px;
+                                    border-radius:22px;
+                                    padding:8px 6px 8px 16px;
                                   "
                                 >
                                   <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
@@ -257,17 +268,17 @@
                                         Learn more
                                       </td>
                                       <td
-                                        width="26"
-                                        height="26"
+                                        width="22"
+                                        height="22"
                                         align="center"
                                         valign="middle"
                                         style="
                                           background:#ffffff;
                                           border-radius:50%;
-                                          width:26px;
-                                          height:26px;
+                                          width:22px;
+                                          height:22px;
                                           font-family:Arial, sans-serif;
-                                          font-size:14px;
+                                          font-size:13px;
                                           font-weight:bold;
                                           color:#f2b400;
                                         "
