@@ -1,90 +1,24 @@
-<mjml>
-  <mj-head>
-    <mj-attributes>
-      <mj-all font-family="Arial, Helvetica, sans-serif" />
-    </mj-attributes>
-    <mj-style>
-      .option-pill {
-        border: 1px solid #b8c4d1;
-        border-radius: 40px;
-        background-color: #eef1f4;
-      }
-      .option-badge {
-        border-radius: 50%;
-        background-color: #e2e7ec;
-        color: #33475b;
-        font-weight: bold;
-        text-align: center;
-        width: 36px;
-        height: 36px;
-      }
-      .option-text {
-        color: #33475b;
-        font-weight: 600;
-        font-size: 16px;
-      }
-    </mj-style>
-  </mj-head>
+Implement minimal RBAC on the backend APIs of this FastAPI app (monthly objective, content plan, content generation, and any other existing business endpoints).
 
-  <mj-body background-color="#f4f6f8">
-    <mj-section padding="20px">
+Roles (only these two patterns, nothing else):
+- {region}_{franchise}_read
+- {region}_{franchise}_write
+Examples: India_atarax_read, russia_allerway_write
 
-      <!-- Row 1: a / c -->
-      <mj-column padding="8px">
-        <mj-table css-class="option-pill" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="50" style="padding:8px;">
-              <table class="option-badge" cellpadding="0" cellspacing="0" width="36" height="36">
-                <tr><td align="center" valign="middle">a</td></tr>
-              </table>
-            </td>
-            <td class="option-text" style="padding:8px;">Аллергическом рините</td>
-          </tr>
-        </mj-table>
-      </mj-column>
+Access rules:
+- Read roles allow GET endpoints; write roles allow POST/PUT/PATCH/DELETE.
+- A write role also implies read for the same region+franchise.
+- Access is scoped to a region+franchise pair. Take region and franchise from the existing request path/query/body. Allow only if the user holds a matching role. Match case-insensitively.
 
-      <mj-column padding="8px">
-        <mj-table css-class="option-pill" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="50" style="padding:8px;">
-              <table class="option-badge" cellpadding="0" cellspacing="0" width="36" height="36">
-                <tr><td align="center" valign="middle">c</td></tr>
-              </table>
-            </td>
-            <td class="option-text" style="padding:8px;">Оба варианта верны</td>
-          </tr>
-        </mj-table>
-      </mj-column>
-    </mj-section>
+Role source and sync:
+- Firestore `users` collection is the source of truth. Each user document has a `roles` list.
+- On login and on every token refresh, load the user's roles from their Firestore user document and refresh them in the auth context (token claims or session, whichever the app already uses). A role change in Firestore must take effect at the next refresh.
+- Reuse the existing auth/token flow and Firestore client. Don't add a new auth system.
 
-    <mj-section padding="0 20px 20px 20px">
+Implementation constraints:
+- One small module (e.g. `rbac.py`) with a single FastAPI dependency, e.g. `require_access("read" | "write")`. It reads the roles from the auth context, extracts region+franchise, and returns 403 on no match (401 if unauthenticated).
+- Apply it via `Depends(...)` on the routes. Don't refactor existing logic.
+- No new collections, admin APIs, role hierarchies, or extra roles (no admin/superuser).
+- Add focused tests: allowed read, allowed write, write blocked for a read-only role, wrong region, wrong franchise, no roles, and roles refreshed from Firestore on token refresh (mock Firestore).
 
-      <!-- Row 2: b / d -->
-      <mj-column padding="8px">
-        <mj-table css-class="option-pill" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="50" style="padding:8px;">
-              <table class="option-badge" cellpadding="0" cellspacing="0" width="36" height="36">
-                <tr><td align="center" valign="middle">b</td></tr>
-              </table>
-            </td>
-            <td class="option-text" style="padding:8px;">Инфекционном рините</td>
-          </tr>
-        </mj-table>
-      </mj-column>
-
-      <mj-column padding="8px">
-        <mj-table css-class="option-pill" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="50" style="padding:8px;">
-              <table class="option-badge" cellpadding="0" cellspacing="0" width="36" height="36">
-                <tr><td align="center" valign="middle">d</td></tr>
-              </table>
-            </td>
-            <td class="option-text" style="padding:8px;">Оба варианта неверны</td>
-          </tr>
-        </mj-table>
-      </mj-column>
-    </mj-section>
-  </mj-body>
-</mjml>
+Inspect the existing auth, Firestore user model and route structure first, then make the smallest possible diff. Summarize the changed files when done.
